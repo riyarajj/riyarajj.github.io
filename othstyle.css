@@ -1,0 +1,80 @@
+.rest{
+    animation-name: example;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    background-size: cover;
+    background-repeat: repeat;
+    height: 300px;
+    padding: 10px 150px ;
+    filter:saturate(125%);
+}
+@keyframes example{
+  0%   {background-image: url(img/a1.jpeg);  }
+  50%  {background-image:  url(img/a3.jpg);}
+  75%  {background-image:  url(img/a4.jpg);}
+  100% {background-image:  url(img/a5.jpg);}
+}
+.content{
+    margin: 35px 50px;
+    padding: 5px 30px;
+    background-color:rgba(0,0,0,0.5);
+    color: white;
+    font-family: cursive;
+    font-size: 20px;
+    font-style: normal;
+}
+
+.aboutus{
+    padding-bottom: 10px;
+    font:italic 25px aclonica;
+    margin:10px;
+   
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.tp{
+    font: italic 23px allura-regular;
+    padding: 10px;
+    
+}
+.thumbnail{
+    display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition:border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+}
+.name{
+ font-family: aguafina;
+ font-size: 20px;
+ font-style:italic;
+ margin-right: 15px; 
+}
+.zoom {
+  
+  transition: transform .2s; /* Animation */
+  
+  
+}
+
+.zoom:hover {
+  transform: scale(1.1);}
+/* Container needed to position the overlay. Adjust the width as needed */
+
+.cardimgsize{
+   width: 250px;
+   height: 300px;
+}
+.r{
+    height: 200px;
+    width: 200px;
+    
+}
+

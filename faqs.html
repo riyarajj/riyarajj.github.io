@@ -1,0 +1,234 @@
+<html>
+    <head>
+       <title>bookify</title>
+         <link rel="icon" href="img/bookfavicon.jpg ">
+         <link href="aclonica" rel="stylesheet" type="text/css">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="othstyle.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://www.flaticon.com/free-icons/best-seller " > 
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/bookfavicon.jpg" alt="bookify" class="rounded-circle mr-1"  height="45" width="45">Bookify
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ">
+                <li class="nav-item active ">
+                    <a class="nav-link" href="bookify.html">
+                    <span class="fa fa-home mr-3"></span>
+                    
+                    <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#mysignupmodal">
+                        <i class="fa fa-user-plus"></i>
+                     Sign up
+                    </a>
+                </li>
+                <li class="nav-item active ">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#myloginmodal">
+                        <i class="fa fa-sign-in-alt"></i>
+                        Login
+                    </a>
+                </li>
+            </ul>
+        </div>
+        </nav>
+        <div class="container">
+<!-- SIGNUP Modal -->
+  <div class="modal" id="mysignupmodal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Register</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+        <div class="container">
+            <form method="post" action="signup.html">
+            <!--USERNAME-->
+            
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text fas fa-user"></span>
+                    </div>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter Username" required="true" pattern="^[a-zA-Z0-9]+([._]?[a-zA-Z0-9]+)*$">
+                </div>
+            
+           <!-- EMAIL -->
+           
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text fa fa-envelope"></span>
+                    </div>
+                    <input type="email" class="form-control" placeholder="Enter email" id="email" name="email" required="true"  >
+                </div>
+                <!-- MOBILE NO.-->
+            
+                <div for="contact" class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text fas fa-phone"></span>
+                    </div>
+                    <input type="tel" class="form-control"  placeholder="+91 "id="contact" name="contact" maxlength=10 size="10" required="true" >
+                </div>
+            <!--PASSWORD-->
+            
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text  fa fa-key"></span>
+                    </div>
+                    <input type="password" class="form-control"  placeholder="Enter password" id="password" name="password" pattern=".{6,}" required="true">
+                </div>
+            
+            
+            <button type="submit" class="btn btn-primary btn-block" name='submit'>Sign up</button>
+        </form>
+        </div>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+  </div>
+</div>
+  
+  
+ 
+        <div class="container">
+ 
+  
+  <!-- The Modal -->
+  <div class="modal" id="myloginmodal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Login</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div class="container">
+                <form action="/action_page.html">
+                    
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text fa fa-envelope"></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Enter email" id="email">
+                    </div>
+                    
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text  fa fa-key"></span>
+                        </div>
+                        <input type="text" class="form-control"  placeholder="Enter password" id="pwd">
+                     </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block">Log in</button>
+                </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+        </div>
+        
+        <br>
+        <div class="conatiner tp text-justify">
+            <h1><u>Frequently Asked Questions(FAQs)</u></h1><br>
+        <ul type="sphere">
+            
+            <li ><b>What is Bookify:The Exclusive book hub?</b><br>
+                <p>Bookify is a meta-search engine for comparing books prices and know availability across all popular Indian book stores.</p></li>
+            <li ><b>Why should I use Bookify?</b><br>
+                <p>Save TIME. Save MONEY. Don't believe me? Here is how -
+                    There are a number of good stores from where you can buy books online. Though, the pricing of the books varies from store to store. You favorite online store might not be THE cheapest every time. So depending on how much you're saving and if your book's availability, you might want to get a book from somewhere other than your preferred store. We help you do all this in just one click!
+                    Bookify significantly eases this search process. Just start your searches from here and then head on to the bookstore which you find best and continue with your online book purchase. No more opening multiple windows and searching on each store.</p></li>
+            <li ><b>Is my personal information shared with anyone?</b><br>
+                <p>At Bookify,we respect your need for confidentiality and we will never share personal information with anyone.We do at times run reports to understand general population behavior and needs , however this is never on a personal level and definately never uses your name,email address or anything else that uniquely identifies you. Should you still have any concern about your data ,please feel free to contact us directly with your specific questions.</p></li>
+            <li><b>Where can I buy the products shown within the website</b><br>
+                <p>The majority of products within our website are available online or at your nearby book stores.At this stages we are unable to provide with a list of retailers that sell these products,however this is something we are working on.A wide variety of books are available on the app but first you have to download the app.</p></li>
+            <li ><b>Can I create multiple profiles within the app/website?</b><br>
+                <p>absolutely,Bookify:the exclusive book hub app/website is designed with keeping the idea of family in mind.Create a profile by going to signup for each member and set their individual preference or needs.</p></li>
+            <li ><b>How can I contact Bookify?</b><br>
+                <p>Please look below of the website to contact us.We have provided a phone no. and valid email where you can submit your issues and we will be contact you (24*7)</p></li>
+             <li ><b>Is this a guaranteed service?</b><br>
+                <p>This is an add-on service provided for specific products and for specific locations.we try our best to give our customers the prompt delivery under this offer. However,there might be delays due to logistic challenges beyond our control.Bookify:The Exclusive book hub process the order within the timeline committed but we dp not guarantee 'express Delivery, if there are any logistical partner delay or any unfortunate/unavoidable natural calamity or state bandh.</p></li>
+        </ul>
+        </div>
+       <!-- PAGE FOOTER -->
+        
+        <footer class="page-footer ">
+            <div style="background-color:#212F3C  ;color: white; font-family: sans-serif;">
+                <div class="container">
+                <div class="row">
+                    <div class="col-md-2 mx-auto mb-1 mt-3">
+                    <a href="aboutus.html"><h5>About Us<i class="fas fa-info-circle ml-2"></i></h5></a>
+                    </div>
+                    <div class="col-md-2  mx-auto mb-1  mt-3">
+                    <a href="t&p.html"><h5>Terms & policy<i class="far fa-clipboard ml-2"></i></h5></a>
+                    </div>
+                    <div class="col-md-2  mx-auto mb-1  mt-3">
+                    <a href="faqs.html"><h5>FAQs<i class="fas fa-question-circle ml-2"></i></h5></a>
+                    </div>
+                    <div class="col-md-2  mx-auto mb-1  mt-3">
+                    <a href="#" data-toggle="modal" data-target="#conact"><h5>Contact Us<i class="fas fa-phone-square ml-2"></i></h5></a>
+                    
+                    </div>
+                </div>
+                </div>
+                <div class="footer-copyright text-center py-3 bg-dark">
+                    
+                    Copyright &copy; Bookify-The Exclusive book hub. All Rights Reserved  |  Contact Us: +91 7302176377
+                    
+                </div>
+            </div>
+        </footer>
+        <!-- FOOTER CONTACT US MODAL-->
+        <div class="modal" id="conact">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Contact</h3>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        
+                        <p><i class="fas fa-home mr-3"></i> Sector-15,Dams Streets,India(+91)</p>
+        
+                        <p><i class="fas fa-envelope mr-3"></i>boscodavid@gmail.com</p>
+        
+                        <p><i class="fas fa-phone mr-3"></i>+91 7302176377</p>
+        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

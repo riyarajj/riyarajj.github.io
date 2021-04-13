@@ -1,0 +1,2013 @@
+
+ <html>
+    <head>
+        <title>bookify</title>
+        <link rel="icon" href="img/bookfavicon.jpg ">
+        <link href="aclonica" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="othstyle.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://www.flaticon.com/free-icons/best-seller " >
+        
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/bookfavicon.jpg" alt="bookify" class="rounded-circle mr-1"  height="45" width="45">Bookify
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ">
+                <li class="nav-item active ">
+                    <a class="nav-link" href="bookify.html">
+                    <span class="fa fa-home mr-3"></span>
+                    
+                    <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#mysignupmodal">
+                        <i class="fa fa-user-plus"></i>
+                     Sign up
+                    </a>
+                </li>
+                <li class="nav-item active ">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#myloginmodal">
+                        <i class="fa fa-sign-in-alt"></i>
+                        Login
+                    </a>
+                </li>
+            </ul>
+        </div>
+        </nav>
+        <div class="container">
+<!-- SIGNUP Modal -->
+  <div class="modal" id="mysignupmodal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Register</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+        <div class="container">
+            <form method="post" action="signup.html">
+            <!--USERNAME-->
+            
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text fas fa-user"></span>
+                    </div>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter Username" required="true" pattern="^[a-zA-Z0-9]+([._]?[a-zA-Z0-9]+)*$">
+                </div>
+            
+           <!-- EMAIL -->
+           
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text fa fa-envelope"></span>
+                    </div>
+                    <input type="email" class="form-control" placeholder="Enter email" id="email" name="email" required="true"  >
+                </div>
+                <!-- MOBILE NO.-->
+            
+                <div for="contact" class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text fas fa-phone"></span>
+                    </div>
+                    <input type="tel" class="form-control"  placeholder="+91 "id="contact" name="contact" maxlength=10 size="10" required="true" >
+                </div>
+            <!--PASSWORD-->
+            
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text  fa fa-key"></span>
+                    </div>
+                    <input type="password" class="form-control"  placeholder="Enter password" id="password" name="password" pattern=".{6,}" required="true">
+                </div>
+            
+            
+            <button type="submit" class="btn btn-primary btn-block" name='submit'>Sign up</button>
+        </form>
+        </div>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+  </div>
+</div>
+  
+  
+ 
+        <div class="container">
+ 
+  
+  <!-- The Modal -->
+  <div class="modal" id="myloginmodal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Login</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div class="container">
+                <form action="/action_page.html">
+                    
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text fa fa-envelope"></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Enter email" id="email">
+                    </div>
+                    
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text  fa fa-key"></span>
+                        </div>
+                        <input type="text" class="form-control"  placeholder="Enter password" id="pwd">
+                     </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block">Log in</button>
+                </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+        </div>
+        
+
+         <div class="rest">
+            <div class="container">
+                 <div class="content">
+                <center><p  style="font-family:aguafina;font-size:40px; ">The Unlimited Guide to Books</p><br> Welcome to your friendly neighborhood<br>
+                Not sure of what you have to read next?Explore our catalog of public domain books,
+                some real gems are hidden in our library</center>
+                 </div>
+            </div>
+        </div>
+        
+         <div class="jumbotron ">   
+        <div class="container ">
+            <center><p style="font-family:Allura-regular ; font-size: 40px;">Books<br></p></center>
+            <div class="row row-cols-5">
+                <div class="col-md "> 
+                    <a href="#bestseller"><img src="img/bs.png" alt="bestseller" class="zoom img-thumbnail rounded-circle" ></a>
+                    <div class="name">Best-Seller</div>
+                </div>
+                <div class="col-md ">
+                    <a href="#trending" ><img src="img/trend.png" alt="trending" class="img-thumbnail rounded-circle" ></a>
+                    <div class="name">Trending</div>
+                </div>
+                <div class="col-md ">
+                    <a href="#famousauthors"><img src="img/famous.png" alt="Authors" class="img-thumbnail rounded-circle "></a>
+                    <div class="name">Famous Authors</div>
+                </div>
+                <div class="col-md ">
+                    <a href="#editors"><img src="img/pub.png" alt="editors" class="img-thumbnail rounded-circle"></a>
+                    <div class="name">Editor's Choice</div>
+                </div>
+                <div class="col-md ">
+                    <a href="#award"><img src="img/award.png" alt="Award" class="img-thumbnail rounded-circle"></a>
+                    <div class="name">Award Winners</div>
+                </div> 
+            </div>
+        </div>
+         </div>
+        <!-- BEST SELLER PRODUCTS -->
+         <div class="container my-3" id="bestseller">
+             <p style="font-family:aguafina; font-size:30px; font-style: oblique">Best-Seller of all Times</p>
+    <!--Carousel Wrapper-->
+    <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+      <a class="carousel-control-prev" href="#multi-item-example" role="button" data-slide="prev">
+    <i class=" fas fa-chevron-circle-left fa-3x"></i>
+    
+  </a>
+  <a class="carousel-control-next" href="#multi-item-example" role="button" data-slide="next">
+     <i class=" fas fa-chevron-circle-right fa-3x"></i>
+  </a>
+
+      <!--Indicators-->
+      <ol class="carousel-indicators ">
+        <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+        <li data-target="#multi-item-example" data-slide-to="1"></li>
+        <li data-target="#multi-item-example" data-slide-to="2"></li>
+      </ol>
+      <!--/.Indicators-->
+
+      <!--Slides-->
+      <div class="carousel-inner" role="listbox">
+
+        <!--First slide-->
+        <div class="carousel-item active">
+
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card mb-2">
+                  <img class="card-img-top cardimgsize" src="img/bs/bs1.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Don Quixote</h4>
+                  <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target='#donquitoxe' >Read more</a>
+                </div>
+              </div>
+            </div>
+              
+
+            <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top cardimgsize" src= "img/bs/bs2.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">The Tales of Two Cities</h4>
+                  <p class="card-text"></p>
+                  <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target='#tales' >Read more</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top cardimgsize" src="img/bs/bs3.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Lord of the Rings</h4>
+                  <p class="card-text"></p>
+                  <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target='#lord' >Read more</a>
+                </div>
+              </div>
+            </div>
+              <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top cardimgsize" src="img/bs/bs4.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Harry Potter and the Sorcerer's Stone</h4>
+                  <p class="card-text"></p>
+                  <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target='#sorcerer' >Read more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!--/.First slide-->
+
+        <!--Second slide-->
+        <div class="carousel-item">
+
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card mb-2">
+                <img class="card-img-top cardimgsize" src= "img/bs/bs5.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">And Then There Were None</h4>
+                  <p class="card-text"></p>
+                  <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target='#none' >Read more</a>
+                </div>
+              </div>
+            </div>
+              <div class="col-md-3">
+              <div class="card mb-2">
+                <img class="card-img-top cardimgsize" src= "img/bs/bs6.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">The Hobbit</h4>
+                  <p class="card-text"></p>
+                  <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target='#hobbit' >Read more</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top cardimgsize" src= "img/bs/bs7.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">She</h4>
+                  <p class="card-text"></p>
+                  <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target='#she' >Read more</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top cardimgsize " src= "img/bs/bs8.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">The Lion,The Witch and the Wardrobe</h4>
+                  <p class="card-text"></p>
+                  <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target='#narnia' >Read more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!--/.Second slide-->
+
+        
+      </div>
+      <!--/.Slides-->
+
+    </div>
+    <!--/.Carousel Wrapper-->
+
+
+  </div>
+        <!--  END OF BEST SELLER PRODUCTS-->
+        
+        <!-- TRENDING BOOKS PRODUCTS -->
+         
+        <div class="container my-3" id="trending">
+            <p style="font-family:aguafina; font-size:30px; font-style: oblique">Trending</p>
+            <div id="multi-item-example2" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+                <a class="carousel-control-prev" href="#multi-item-example2" role="button" data-slide="prev">
+                    <i class=" fas fa-chevron-circle-left fa-3x"></i>
+                </a>
+                <a class="carousel-control-next" href="#multi-item-example2" role="button" data-slide="next">
+                    <i class=" fas fa-chevron-circle-right fa-3x"></i>
+                </a>
+
+                <!--Indicators-->
+                <ol class="carousel-indicators">
+                    <li data-target="#multi-item-example2" data-slide-to="0" class="active"></li>
+                    <li data-target="#multi-item-example2" data-slide-to="1"></li>
+                    <li data-target="#multi-item-example2" data-slide-to="2"></li>
+                </ol>
+                <!--/.Indicators-->
+
+                <!--Slides-->
+                <div class="carousel-inner" role="listbox">
+
+                    <!--First slide-->
+                    <div class="carousel-item active">
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="card mb-2">
+                                    <img class="card-img-top-cardimgsize cardimgsize" src="img/t/t1.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title">The Lying Life of Adults</h4>
+                                        <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target='#adults' >Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+
+            <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top-cardimgsize cardimgsize" src= "img/t/t2.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Transcendent Kingdom</h4>
+                  <p class="card-text"></p>
+                  <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target='#kingdom' >Read more</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top-cardimgsize cardimgsize" src="img/t/t3.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">the Glass Hotel</h4>
+                  <p class="card-text"></p>
+                  <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target='#glass' >Read more</a>
+                </div>
+              </div>
+            </div>
+              <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top-cardimgsize cardimgsize" src="img/t/t4.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">My Dark Vanessa</h4>
+                  <p class="card-text"></p>
+                  <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target='#vanessa' >Read more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!--/.First slide-->
+
+        <!--Second slide-->
+        <div class="carousel-item">
+
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card mb-2">
+                <img class="card-img-top-cardimgsize cardimgsize" src= "img/t/t5.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">The Death of Vivek Oji</h4>
+                  <p class="card-text"></p>
+                  <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target='#vivek' >Read more</a>
+                </div>
+              </div>
+            </div>
+              <div class="col-md-3">
+              <div class="card mb-2">
+                <img class="card-img-top-cardimgsize cardimgsize" src= "img/t/t6.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Real Life</h4>
+                  <p class="card-text"></p>
+                  <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target='#life' >Read more</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top cardimgsize cardimgsize" src= "img/t/t7.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">The Vanishing Half</h4>
+                  <p class="card-text"></p>
+                  <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target='#half' >Read more</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top cardimgsize " src= "img/t/t8.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">The Registers</h4>
+                  <p class="card-text"></p>
+                  <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target='#register' >Read more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!--/.Second slide-->
+
+
+      </div>
+      <!--/.Slides-->
+
+    </div>
+    <!--/.Carousel Wrapper-->
+
+
+  </div>
+        <!--  END OF TRENDING BOOKS PRODUCTS-->
+        
+        <!--FAMOUS AUTHORS-->
+       
+        <div class="container my-3" id="famousauthors">
+             <p style="font-family:aguafina; font-size:30px; font-style: oblique">Famous Authors</p>
+    <!--Carousel Wrapper-->
+    <div id="multi-item-example5" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+      <a class="carousel-control-prev" href="#multi-item-example5" role="button" data-slide="prev">
+    <i class=" fas fa-chevron-circle-left fa-3x" style="color: black"></i>
+    
+  </a>
+  <a class="carousel-control-next" href="#multi-item-example5" role="button" data-slide="next">
+      <i class=" fas fa-chevron-circle-right fa-3x" style="color: black;"></i>
+  </a>
+            <br>
+
+      <!--Indicators-->
+      <ol class="carousel-indicators">
+        <li data-target="#multi-item-example5" data-slide-to="0" class="active"></li>
+        <li data-target="#multi-item-example5" data-slide-to="1"></li>
+        <li data-target="#multi-item-example5" data-slide-to="2"></li>
+      </ol>
+      <!--/.Indicators-->
+
+      <!--Slides-->
+      <div class=" container carousel-inner" role="listbox">
+
+        <!--First slide-->
+        <div class="carousel-item active">
+            <div class="row">
+                <div class="col-md-3">
+                    <figure>
+                        <a href="#" data-toggle="modal" data-target="#meyers"><img class="card-img-top  rounded-circle" src="img/fa/f1.jpg" alt="Card image cap"></a>
+                       <figcaption class="text-center" style="font-weight: bold">Stepheine Myers</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure>
+                        <a href="#" data-toggle="modal" data-target="#robert"><img class="card-img-top  rounded-circle" src="img/fa/f2.jpg" alt="Card image cap"></a>
+                       <figcaption class="text-center" style="font-weight: bold">Nora Robert</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure>
+                        <a href="#" data-toggle="modal" data-target="#rowling"><img class="card-img-top rounded-circle" src="img/fa/f3.jpg" alt="Card image cap"></a>
+                       <figcaption class="text-center" style="font-weight: bold">J.K. Rowling</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure>
+                        <a href="#" data-toggle="modal" data-target="#roy"><img class="card-img-top  rounded-circle" src="img/fa/f4.jpg" alt="Card image cap"></a>
+                       <figcaption class="text-center" style="font-weight: bold">Arundhati Roy</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+      
+      
+        <!--Second slide-->
+        <div class="carousel-item ">
+            <div class="row">
+                <div class="col-md-3">
+                    <figure>
+                        <a href="#" data-toggle="modal" data-target="#seth"><img class="card-img-top rounded-circle" src="img/fa/f9.jpg" alt="Card image cap"></a>
+                       <figcaption class="text-center" style="font-weight: bold">Vikram Seth</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure>
+                       <a href="#" data-toggle="modal" data-target="#dutta"><img class="card-img-top rounded-circle" src="img/fa/f10.jpg" alt="Card image cap"></a>
+                       <figcaption class="text-center" style="font-weight: bold">Durjoy Dutta</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure>
+                       <a href="#" data-toggle="modal" data-target="#khaleed"><img class="card-img-top rounded-circle" src="img/fa/f11.jpg" alt="Card image cap"></a>
+                       <figcaption class="text-center" style="font-weight: bold">Khaled Hosseini</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <figure>
+                       <a href="#" data-toggle="modal" data-target="#pritam"><img class="card-img-top rounded-circle" src="img/fa/f12.jpg" alt="Card image cap"></a>
+                       <figcaption class="text-center" style="font-weight: bold">Amrita Pritam</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>  
+        
+        <!-- END OF Second SLIDE -->
+      </div>
+        </div>
+        </div>
+        <!-- END OF FAMOUS AUTHORS -->
+
+        <!-- EDITORS CHOICE PRODUCTS -->
+         <div class="container my-3" id="editors">
+             <p style="font-family:aguafina; font-size:30px; font-style: oblique">Editor's Choice</p>
+    <!--Carousel Wrapper-->
+    <div id="multi-item-example3" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+      <a class="carousel-control-prev" href="#multi-item-example3" role="button" data-slide="prev">
+    <i class=" fas fa-chevron-circle-left fa-3x"></i>
+    
+  </a>
+  <a class="carousel-control-next" href="#multi-item-example3" role="button" data-slide="next">
+     <i class=" fas fa-chevron-circle-right fa-3x"></i>
+  </a>
+
+      <!--Indicators-->
+      <ol class="carousel-indicators">
+        <li data-target="#multi-item-example3" data-slide-to="0" class="active"></li>
+        <li data-target="#multi-item-example3" data-slide-to="1"></li>
+      </ol>
+      <!--/.Indicators-->
+
+      <!--Slides-->
+      <div class="carousel-inner" role="listbox">
+
+        <!--First slide-->
+        <div class="carousel-item active">
+
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card mb-2">
+                  <img class="card-img-top-cardimgsize cardimgsize" src="img/e/e1.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">A Ghost of a Chance</h4>
+                  <p class="card-text"></p>
+                  <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target='#chance' >Read more</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top cardimgsize" src= "img/e/e2.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Aequitas</h4>
+                  <p class="card-text"></p>
+                  <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target='#tas' >Read more</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top cardimgsize" src="img/e/e3.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Sadie's Spirit</h4>
+                  <p class="card-text"></p>
+                  <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target='#spirit' >Read more</a>
+                </div>
+              </div>
+            </div>
+              <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top cardimgsize" src="img/e/e4.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Webley and a World Machine</h4>
+                  <p class="card-text"></p>
+                  <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target='#machine' >Read more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!--/.First slide-->
+
+        <!--Second slide-->
+        <div class="carousel-item">
+
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card mb-2">
+                <img class="card-img-top cardimgsize" src= "img/e/e5.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Loss of Reason</h4>
+                  <p class="card-text"></p>
+                  <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target='#reason' >Read more</a>
+                </div>
+              </div>
+            </div>
+              <div class="col-md-3">
+              <div class="card mb-2">
+                <img class="card-img-top cardimgsize" src= "img/e/e6.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title"> Tangled up in Ice</h4>
+                  <p class="card-text"></p>
+                  <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target='#ice' >Read more</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top cardimgsize" src= "img/e/e7.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Dangerous Engagement </h4>
+                  <p class="card-text"></p>
+                  <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target='#engagement' >Read more</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top cardimgsize " src= "img/e/e8.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title"> Black Edge</h4>
+                  <p class="card-text"></p>
+                  <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target='#edge' >Read more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!--/.Second slide-->
+
+      </div>
+      <!--/.Slides-->
+
+    </div>
+    <!--/.Carousel Wrapper-->
+
+
+  </div>
+        <!--  END OF EDITORS CHOICE PRODUCTS-->
+        
+        <!-- AWARD WINNERS PRODUCTS -->
+        
+         <div class="container my-3" id="award">
+             <p style="font-family:aguafina; font-size:30px; font-style: oblique">Award Winners</p>
+    <!--Carousel Wrapper-->
+    <div id="multi-item-example4" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+      <a class="carousel-control-prev" href="#multi-item-example4" role="button" data-slide="prev">
+    <i class=" fas fa-chevron-circle-left fa-3x"></i>
+    
+  </a>
+  <a class="carousel-control-next" href="#multi-item-example4" role="button" data-slide="next">
+     <i class=" fas fa-chevron-circle-right fa-3x"></i>
+  </a>
+
+      <!--Indicators-->
+      <ol class="carousel-indicators">
+        <li data-target="#multi-item-example4" data-slide-to="0" class="active"></li>
+        <li data-target="#multi-item-example4" data-slide-to="1"></li>
+        <li data-target="#multi-item-example4" data-slide-to="2"></li>
+      </ol>
+      <!--/.Indicators-->
+
+      <!--Slides-->
+      <div class="carousel-inner" role="listbox">
+
+        <!--First slide-->
+        <div class="carousel-item active">
+
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card mb-2">
+                  <img class="card-img-top cardimgsize" src="img/a/a1.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">The Sense of an Ending </h4>
+                  <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target='#ending' >Read more</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top cardimgsize" src= "img/a/a2.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">The Famished Road </h4>
+                  <p class="card-text"></p>
+                  <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target='#road' >Read more</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top cardimgsize" src="img/a/a3.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">J </h4>
+                  <p class="card-text"></p>
+                  <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target='#J' >Read more</a>
+                </div>
+              </div>
+            </div>
+              <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top cardimgsize" src="img/a/a4.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title"> The Inheritance of Loss</h4>
+                  <p class="card-text"></p>
+                  <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target='#loss' >Read more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!--/.First slide-->
+
+        <!--Second slide-->
+        <div class="carousel-item">
+
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card mb-2">
+                <img class="card-img-top cardimgsize" src= "img/a/a5.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">The God of Small Things </h4>
+                  <p class="card-text"></p>
+                  <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target='#things' >Read more</a>
+                </div>
+              </div>
+            </div>
+              <div class="col-md-3">
+              <div class="card mb-2">
+                <img class="card-img-top cardimgsize" src= "img/a/a6.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">In Custody </h4>
+                  <p class="card-text"></p>
+                  <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target='#custody' >Read more</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top cardimgsize" src= "img/a/a7.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">The Luminaries </h4>
+                  <p class="card-text"></p>
+                  <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target='#luminaries' >Read more</a>
+                </div>
+              </div>
+            </div>
+              
+            <div class="col-md-3 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top cardimgsize" src= "img/a/a12.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">The Underground Railroad </h4>
+                  <p class="card-text"></p>
+                  <a class="btn btn-primary btn-block" href="#" data-toggle="modal" data-target='#railroad' >Read more</a>
+                </div>
+              </div>
+            </div>  
+
+            
+        </div>
+        <!--/.Second slide-->
+
+        
+      </div>
+      <!--/.Slides-->
+
+    </div>
+    <!--/.Carousel Wrapper-->
+
+
+  </div>
+         </div>
+        <!--  END OF AWARD WINNERS PRODUCTS-->
+        
+    <div class="modal" id="donquitoxe">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">About</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body">
+                    The plot revolves around the adventures of a noble (hidalgo) from La Mancha named Alonso Quixano, who reads so many chivalric romances that he loses his mind and decides to become a knight-errant (caballero andante) to revive chivalry and serve his nation, under the name Don Quixote de la Mancha.
+                    <br><b>Published in English:</b> 1612 (Part One); 1620 ...<br>
+                    <b>Pages:</b> 863
+                    <br><b>Original title:</b> El Ingenioso Hidalgo Don Quixote ...
+                    <br><b>Language:</b> Early Modern Spanish
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal" id="tales">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">About</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body">
+                    A Tale of Two Cities, or by its full title A Tale of Two Cities: A Story of the French Revolution, is an 1859 historical novel by Charles Dickens, set in London and Paris before and during the French Revolution.
+                    <br><b>Published in English:</b>Weekly serial April – November 18. <br>
+                    <b>Pages:</b>341 
+                    <br><b>Genre:</b>Historical novel
+                    <br><b>Language:</b> English
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal" id="lord">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">About</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body">
+                    The Lord of the Rings is an epic high fantasy novel by the English author and scholar J. R. R. Tolkien. Set in Middle-earth, the world at some distant time in the past, the story began as a sequel to Tolkien's 1937 children's book The Hobbit, but eventually developed into a much larger work.
+                    <br><b>Publisher:</b> Allen & Unwin<br>
+                    <b>Publication:</b>29 July 1954 (The Fellowship of the Ring)<br>11 November 1954 (The Two Towers)<br> 20 October 1955 (The Return of the King)<br>
+                    <b>Author:</b> J.R.R.Tolkien
+                    <br><b>Genre:</b>Fantasy ,Adventure
+                    <br><b>Language:</b> English
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal" id="sorcerer">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">About</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body">
+                     Harry Potter and the Chamber of Secrets. Harry Potter and the Philosopher's Stone is a fantasy novel written by British author J. K. Rowling.
+                    <br><b>Publisher:</b>Bloomsbury (UK) (Canada 2010–present)<br>Arthur A. Levine/Scholastic (US) <br>Raincoast (Canada 1998–2010)<br>
+                    <b>Publication Date:</b>26 june 1997(UK)<br>1 September 1998(US)<BR>
+                    <b>Author:</b> J.K.Rowling
+                    <br><b>Genre:</b>Fantasy 
+                    <br><b>Language:</b> English
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal" id="none">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">About</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body">
+                    And Then There Were None is a mystery novel by the English writer Agatha Christie, described by her as the most difficult of her books to write.
+                    <br><b>Publisher:</b> Collins Crime Club<br>
+                    <b>Pages:</b> 272
+                    <br><b>Original title:</b>Ten Little Niggers
+                    <br><b>Language:</b>English
+                    <br><b>Genre:</b>Mystery,Crime,Psychological,Thriller,Horror
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger " data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal" id="hobbit">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">About</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body">
+                    The Hobbit, or There and Back Again is a children's fantasy novel by English author J. R. R. Tolkien. It was published on 21 September 1937 to wide critical acclaim, being nominated for the Carnegie Medal and awarded a prize from the New York Herald Tribune for best juvenile fiction's
+                    <br><b>Publisher:</b>George Allen & Unwin (UK) <br> 
+                    <b>Pages:</b> 310
+                    <br><b>Set in:</b>Middle-Earth
+                    <br><b>Language:</b>English
+                    <br><b>Genre:</b>Novel, Children's literature, Epic, Fantasy Fiction, High fantasy
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger " data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal" id="she">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">About</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body">
+                    She, subtitled A History of Adventure, is a novel by the English writer H.Rider Haggard. She was extraordinarily popular upon its release and has never been out of print. The story is a first-person narrative which follows the journey of Horace Holly and his ward Leo Vincey to a lost kingdom in the African interior.
+                    <br><b>Author:</b> Rider Haggard
+                    <br><b>Publisher:</b> Longmans<br>
+                    <b>Pages:</b> 317
+                    <br><b>Genre:</b> Fantasy, adventure, romance, Gothic
+                    <br><b>Language:</b> English
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal" id="narnia">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">About</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body">
+                    The Chronicles of Narnia is a series of fantasy novels by British author C. S. Lewis. Written by Lewis, illustrated by Pauline Baynes, and originally published in London between 1950 and 1956, The Chronicles of Narnia has been adapted for radio, television, the stage, and film.
+                    <br><b>Author:</b> C.S. Lewis
+                    <br><b>Publisher:</b> Geoffrey Bles (books 1–5)<br>The Bodley Head (books 6–7)<br>HarperCollins (current; worldwide)<br>
+                    <b>Pages:</b> 317
+                    <br><b>Series:</b>  The Lion, the Witch and the Wardrobe – 1950<br>Prince Caspian – 1951<br>The Voyage of the Dawn Treader – 1952<br>The Silver Chair – 1953 <br>Horse and His Boy – 1954<br> The Magician's Nephew – 1955<br>The Last Battle – 1956
+                    <br><b>Genre:</b> Fantasy,Children's literature
+                    <br><b>Language:</b> English
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal" id="adults">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">About</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body">
+                    In Naples in the early 1990s, twelve-year-old Giovanna Trada overhears her father Andrea disparagingly liken her appearance to that of his estranged sister Vittoria. This sends Giovanna into a search for Vittoria on another side of Naples to discover the nature of the family's fallout.
+                    <br><b>Author:</b>Elena Ferrante
+                    <br><b>Publisher:</b> Edizioni e/o
+                    <b>Pages:</b> 336
+                    <br><b>Original Title:</b>  La vita bugiarda degli adulti
+                    <br><b>Genre:</b> Bildungsroman, Coming-of-age story, Domestic Fiction
+                    <br><b>Published in English:</b> 1 September 2020
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal" id="kingdom">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">About</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body">
+                    The novel follows 28-year-old Gifty, a PhD candidate in neuroscience in her fifth year at Stanford University, and her Ghanaian-American mother, who is suffering from a deep depression.
+                    <br><b>Author:</b> Yaa Gyassi
+                    <br><b>Publisher:</b> Alfred A. Knopf<br>
+                    <b>Pages:</b> 288
+                    <br><b>Language:</b> English
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+         <div class="modal" id="glass">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">About</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body">
+                    The Glass Hotel is a 2020 novel by Canadian writer Emily St. John Mandel. It is Mandel's fifth novel, and the first since winning the Arthur C. Clarke Award in 2015. It follows the aftermath of a disturbing graffiti incident at a hotel on Vancouver Island and the collapse of an international Ponzi scheme. 
+                    <br><b>Author:</b>  Emily St. John Mandel 
+                    <br><b>Publisher:</b>  HarperCollins <br>
+                    <b>Pages:</b> 320
+                    <br><b>Genre:</b> Mystery, Psychological Fiction 
+                    <br><b>Language:</b> English
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal" id="vanessa">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">About</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body">
+                    My Dark Vanessa is the harrowing tale of fifteen-year-old Vanessa Wye's relationship with her forty-five-year-old English teacher, Jacob Strane, and the lasting impact it has on her life. It also examines themes of consent, coercion and manipulation, and asks what is it that makes someone a victim.
+                    <br><b>Author:</b>   Kate Elizabeth Russell
+                    <br><b>Publisher:</b>  HarperCollins <br>
+                    <b>Pages:</b> 250
+                    <br><b>Genre:</b> Psychological Fiction 
+                    <br><b>Language:</b> English
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal" id="vivek">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">About</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body">
+                    What follows is the tumultuous, heart-wrenching story of one family's struggle to understand a child whose spirit is both gentle and mysterious. Raised by a distant father and an understanding but overprotective mother, Vivek suffers disorienting blackouts, moments of disconnection between self and surroundings.
+                    <br><b>Author:</b> Akwaeke Emezi
+                    <br><b>Publisher:</b>   <br>
+                    <b>Pages:</b> 256
+                    <br><b>Genre:</b> Coming-of-age story
+                    <br><b>Language:</b> English
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal" id="life">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">About</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body">
+                    Real Life is the 2020 debut novel of Alabama-born American writer Brandon Taylor. Described as a campus novel and a coming-of-age novel, the partly autobiographical book tells of the experiences of a gay, Black doctoral student in a predominantly White, Midwestern PhD program.
+                    <br><b>Author:</b>  Brandon Taylor
+                    <br><b>Publisher:</b>   Riverhead Books   <br>
+                    <b>Pages:</b> 336
+                    <br><b>Genre:</b> Bildungsroman, Gay Fiction
+                    <br><b>Language:</b> English
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="modal" id="half">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">About</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body">
+                    The Vanishing Half is a 2020 novel by Brit Bennett. It is her second novel and was published by Riverhead Books. It debuted at number one on The New York Times fiction best-seller list. HBO acquired the rights to develop a limited series with Bennett as executive producer.
+                    <br><b>Author:</b> Brit Bennett
+                    <br><b>Publisher:</b>   Riverhead Books   <br>
+                    <b>Pages:</b> 352
+                    <br><b>Genre:</b> Historical Fiction, Mystery, Coming-of-age story, Family saga, Domestic Fiction
+                    <br><b>Language:</b> English
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal" id="register">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">About</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body">
+                    An audacious marvel of a novel about baseball and a future America, from the always inventive and exciting author of The Love Wife and Who's Irish The time: a not-so-distant future. The place: AutoAmerica. The land: half under water
+                    <br><b>Author:</b> Gish Jen
+                    <br><b>Publisher:</b> Knopf Doubleday   <br>
+                    <b>Pages:</b> 320
+                    <br><b>Genre:</b> Historical Fiction, Mystery, Coming-of-age story, Family saga, Domestic Fiction
+                    <br><b>Language:</b> English
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal" id="meyers">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title" >Top 5 books by Stephiene Meyers</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                    <div class="modal-body" style="font-style: italic;font-family: cursive;">
+                    <ol>
+                        <li>Twilight (5 October 2005)</li><li>The Chemist (8 November 2016)</li><li>The Host (6 May 2008)</li><li>The Short Second Life of Bree Tanner (5 June 2010)</li><li>My Ideal Bookshelf (13 November 2012)</li>
+                    </ol>
+                    <hr>
+                    </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal" id="robert">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Best 6 Books by Nora Robert</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body" style="font-style: italic;font-family: cursive;">
+                    <ol>
+                        <li>Blue dahlia  (26 October 2004)</li><li>Vision in White  (November 2011)</li><li>The Next Always  ()</li><li>Montana Sky (April 1996)</li><li>Northern Lights  (July 1995)</li><li>Dance Upon The Air  (2001)</li>
+                    </ol>
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+        <div class="modal" id="rowling">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Best 6 Books by J.K.Rowling</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body " style="font-style: italic;font-family: cursive;">
+                    <ol>
+                        <li>Harry Potter Series (Net worth 456 Million)</li><li>The Casual Vacancy ~ 2 Million</li><li>The Cuckoo's Calling ~ 1 Million</li><li>Fantastic Beast Series</li><li> The Silkworm (19 June 2014)</li><li>Career of Evil (20 October 2015)</li>
+                    </ol>
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal" id="roy">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Best 6 Books by Arundhati Roy</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body " style="font-style: italic;font-family: cursive;" >
+                    <ol>
+                        <li>The God of Small Things  (1997)</li><li> The Ministry of Utmost Happiness  (6 June 2017)</li><li> Capitalism: A Ghost Story  (14 April 2014)</li><li> Walking With The Comrades  (15 May 2011)</li><li>  War Talk  (2003)</li><li>The End of Imagination  (December 1998)</li>
+                    </ol>
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal" id="seth">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Best 6 Books by Vikram Seth</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body" style="font-style: italic;font-family: cursive;">
+                    <ol>
+                        <li>A Suitable Boy  (1993)</li><li> The Golden Gate  (1986)</li><li> The Rivered Earth (2011)</li><li> An Equal Music  (1999)</li><li>From Heaven lake:Travel Through  (1983)</li><li>Two Lives:A Memoir  (2005)</li>
+                    </ol>
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal" id="dutta">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Best 6 Books by  Durjoy Dutta</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body" style="font-style: italic;font-family: cursive;">
+                    <ol>
+                        <li>Of Course I Love You..!...Till I Find Someone Better (2008)</li><li>Now That You're Rich! Lets Fall in Love! (co-author Maanvi Ahuja) (2009)</li><li> SHE BROKE UP I DIDN'T! ... I Just Kissed Someone Else! (2010)</li><li> Ohh Yes, I'm Single..! And So is My Girlfriend! (co-author Neeti Rustagi) (2010)</li><li>The Backbenchers series (the first book of the series was published in 2011)</li><li>You Were My Crush! ... till you said you love me! (co-author Orvana Ghai) (2011)</li>
+                    </ol>
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal" id="khaleed">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Best 4 Books by Khaleed Hosseini</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body" style="font-style: italic;font-family: cursive;">
+                   <ol>
+                        <li>The Kite Runner  (2003)</li><li>A Thousand Splendid Suns (2007)</li><li>And the Mountains Echoed (2013)</li><li>And the Mountains Echoed (2013)</li><li>Sea Prayer (2018)</li>
+                    </ol>
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal" id="pritam">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Best 6 Books by Amrita Pritam</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body " style="font-style: italic;font-family: cursive;">
+                    <ol>
+                        <li>Pinjar</li><li> Doctor Dev</li><li> Kore Kagaz,Unchas Din</li><li>Dharti, Sagar aur Seepian</li><li> Rang ka Patta</li><li>Dilli ki Galiyan</li>
+                    </ol>
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+        <div class="modal" id="ending">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">About</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body">
+                    The Sense of an Ending is a 2011 novel written by British author Julian Barnes. ... The Sense of an Ending is narrated by a retired man named Tony Webster, who recalls how he and his clique met Adrian Finn at school and vowed to remain friends for life.
+                    <br><b>Author:</b>Julian Barnes
+                    <br><b>Publisher:</b>  Jonathan Cape (UK),Knopf (US)<br>
+                    <b>Pages:</b> 163
+                    <br><b>Genre:</b>  Novel, Psychological Fiction 
+                    <br><b>Award:</b>  Booker Prize
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal" id="road">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">About</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body">
+                    The Famished Road is a novel by Nigerian author Ben Okri, the first book in a trilogy that continues with Songs of Enchantment (1993) and Infinite Riches (1998).<!-- comment -->
+                    <br><b>Author:</b>	Ben Okri
+                    <br><b>Publisher:</b> Jonathan Cape<br>
+                    <b>Pages:</b> 500
+                    <br><b>Genre:</b> Magic realism 
+                    <br><b>Award:</b>  Booker Prize(1991 for fiction)
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal" id="J">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">About</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body">
+                    Howard Jacobson’s “J” opens with a parable, or, as the book terms it, an “argument.” A wolf and a tarantula are comparing modes of taking down prey, with the wolf’s rapacious efficiency pitted against the spider’s patience. As is the way with such tales, the wolf is undone by his own skill, polishing off all his quarry until he’s forced to eat his family and finally himself. “Moral: Always leave a little on your plate.”
+                    <br><b>Author:</b>  Howard Jacobson
+                    <br><b>Publisher:</b> Jonathan Cape<br>
+                    <b>Pages:</b> 326
+                    <br><b>Genre:</b>   Novel, Romance novel, Dystopian Fiction
+                    <br><b>Award:</b>  Booker Prize(2010)
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal" id="loss">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">About</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body">
+                    The Inheritance of Loss is the second novel by Indian author Kiran Desai. It was first published in 2006. It won a number of awards, including the Man Booker Prize for that year, the National Book Critics Circle Fiction Award in 2007, and the 2006 Vodafone Crossword Book Award.
+                    <br><b>Author:</b>	Kiran Desai
+                    <br><b>Publisher:</b>  Atlantic Monthly Press (US),Hamish Hamilton (UK)<br>
+                    <b>Pages:</b> 336
+                    <br><b>Genre:</b> Novel, Psychological Fiction, Domestic Fiction 
+                    <br><b>Award:</b>  Booker Prize, National Book Critics Circle Award for Fiction
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal" id="things">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">About</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body">
+                   The God of Small Things is the debut novel of Indian writer Arundhati Roy. It is a story about the childhood experiences of fraternal twins whose lives are destroyed by the "Love Laws" that lay down "who should be loved, and how.
+                    <br><b>Author:</b>   Arundhati Roy
+                    <br><b>Publisher:</b> IndiaInk, India<br>
+                    <b>Pages:</b> 333
+                    <br><b>Genre:</b>  Novel, Psychological Fiction, Domestic Fiction 
+                    <br><b>Award:</b>  Booker Prize(1997)
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal" id="custody">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">About</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body">
+                    Deven earns a living by teaching Hindi literature to college students. As his true interest was in Urdu poetry, he jumps at the chance to meet the great Urdu poet, Nur. Under the advice of his friend Murad, an editor of a periodical devoted to Urdu literature, Deven procures a secondhand tape recorder so that he can help transcribe Urdu's early poetry, as well as conduct an interview or even write the memoirs of Nur. However, things do not happen as he expects them to.
+                    <br><b>Author:</b>  Anita Desai
+                    <br><b>Publisher:</b> Heinemann<br>
+                    <b>Pages:</b> 208
+                    <br><b>Genre:</b>   Novel, Fiction
+                    <br><b>Award:</b>  Booker Prize(1984)
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal" id="luminaries">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">About</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body">
+                   The Luminaries is a 2013 novel by Eleanor Catton. Set in New Zealand's South Island in 1866, the novel follows Walter Moody, a prospector who travels to the West Coast settlement of Hokitika to make his fortune on the goldfields.
+                   <br><b>Author:</b>  Eleanor Catton
+                    <br><b>Publisher:</b>  2013 Victoria University Press (New Zealand), Granta Books (UK), Little, Brown and Company (North America) <br>
+                    <b>Pages:</b> 848 pp
+                    <br><b>Genre:</b> Novel, Mystery, Historical Fiction
+                    <br><b>Award:</b>  Man Booker Prize(2013)
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal" id="railroad">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">About</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body">
+                    The Famished Road is a novel by Nigerian author Ben Okri, the first book in a trilogy that continues with Songs of Enchantment (1993) and Infinite Riches (1998).<!-- comment -->
+                    <br><b>Author:</b>	Colson Whitehead
+                    <br><b>Publisher:</b> Doubleday<br>
+                    <b>Pages:</b> 320
+                    <br><b>Subject:</b>  Slavery
+                    <br><b>Award:</b>  2017 Pulitzer Prize for Fiction, the 2016 National Book Award for Fiction,the Arthur C. Clarke Award, and the 2017 Andrew Carnegie Medal for Excellence. It was longlisted for the 2017 Man Booker Prize. 
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+        
+        <div class="modal" id="chance">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">About</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body">
+                    From award-winning novelist Cherie Claire comes a new paranormal mystery series.They say there are blessings from Hurricane Katrina. For Viola Valentine of New Orleans, it was losing her dead-end job and leaving behind a loveless marriage and an overbearing family.But the storm also blew open a psychic door.
+                    <br><b>Author:</b> Cherie Claire
+                    <br><b>Publisher:</b> Happy Gris Gris Publishing<br>
+                    <b>Pages:</b> 256
+                    <br><b>Genre:</b> Mystery, Ghost story 
+                    <br><b>Language:</b> English
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+        <div class="modal" id="tas">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">About</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body">
+                    Honor Genovese, AKA Aequitas, is number eight on the FBI's Most Wanted List.  A hacker extraordinaire, Honor lives to destroy those who destroy others. Ever since the murder of her family and the kidnapping of her sister Hannah, Honor has worked tirelessly to unmask and obliterate the predators of the world, and to find the sister stolen from her. But when she suddenly discovers Hannah on the other side of the world, Honor must leave the safe, insulated realm she has built and dare to reach out to the man who hunts her.
+                    <br><b>Author:</b> Hope Anika
+                    <b>Pages:</b> 195
+                    <br><b>Genre:</b> Romance 
+                    <br><b>Language:</b> English
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="modal" id="spirit">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">About</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body">
+                    Sadie didn’t believe in ghosts, until she became one. When pragmatic physician and budding researcher, Sadie Crawford, goes for a hike, she didn’t imagine she would die on the trail. She definitely didn’t imagine she would become a ghost. Rather than idly lingering on Earth, she focuses on finding her killer's
+                    <br><b>Author:</b> C. B. Samet
+                    <br><b>Publisher:</b>  Novels by CB Samet <br>
+                    <b>Pages:</b> 100
+                    <br><b>Genre:</b>  Romance novel, New adult fiction, Contemporary romance, Paranormal romance
+                    <br><b>Language:</b> English
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="modal" id="machine">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">About</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body">
+                    If Adal and Arija can't survive, we're all screwed. Let the war begin.Deep in the belly of a cave lies a door to a mechanical world that will change two lives forever.Webley and the steam-powered creations of the World Machine keep the Earth turning's
+                    <br><b>Author:</b>  Zachary Chopchinski
+                    <br><b>Publisher:</b> CreateSpace Independent Publishing Platform<br>
+                    <b>Pages:</b> 406
+                    <br><b>Genre:</b>  Steampunk, Science Fiction, Fantasy Fiction, Fantasy comedy
+                    <br><b>Language:</b> English
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="modal" id="reason">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">About</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body">
+                    Distant for many years, Franklin Reveal in Pennsylvania and his step-brother Everon Student in Nevada are connected by a single link: Their sister Cynthia.Enter the nightmare.A nuclear bomb is detonated in New York. Banker, wife, mother, Cynthia lives in New York. And her brothers are determined to find her. 
+                    <br><b>Author:</b>   Miles A. Maxwell
+                    <br><b>Publisher:</b> B B Broadington, LLC, 2015<br>
+                    <b>Pages:</b> 288
+                    <br><b>Genre:</b>  Fiction, Thriller
+                    <br><b>Language:</b> English
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="modal" id="ice">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">About</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body">
+                    I have debts to pay and secrets to keep. When someone threatens my life, I crash into him: Jackson LudlowThe recluse billionaire of New YorkOnce, he had everything a man could want
+                    <br><b>Author:</b> Charlotte Byrd
+                    <br><b>Publisher:</b>Byrd Book Llc <br>
+                    <b>Pages:</b> 320
+                    <br><b>Genre:</b> Romance novel, Gothic fiction, New adult fiction, Contemporary romance
+                    <br><b>Language:</b> English
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="modal" id="engagement">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">About</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body">
+                    Not long ago, there was nothing I couldn't have. Now, I don't even have the choice of whom to marry. To save my father's life and our family's legacy, I have to marry a cruel man who wants me only as a trophy. Henry Asher was just supposed to be a summer fling, but we fell in love's
+                    <br><b>Author:</b>  Charlotte Byrd
+                    <br><b>Publisher:</b> Byrd Book Llc<br>
+                    <b>Pages:</b>310
+                    <br><b>Genre:</b>   Romance novel, Suspense, Thriller, Psychological thriller, New adult fiction, Contemporary romance, Romantic Suspense
+                    <br><b>Language:</b> English
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="modal" id="edge">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">About</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                    <!-- Modal body -->
+                <div class="modal-body">
+                    I don't belong here. I'm in way over my head. But I have debts to pay. They call my name. The spotlight is on. The auction starts. Mr. Black is the highest bidder. He's dark, rich, and powerful. He likes to play games. The only rule is there are no rules. But it's just one night. What's the worst that can happen?
+                    <br><b>Author:</b>  Charlotte Byrd
+                    <br><b>Publisher:</b> Byrd Book Llc<br>
+                    <b>Pages:</b>310
+                    <br><b>Genre:</b>    Romance novel, New adult fiction, Contemporary romance
+                    <br><b>Language:</b> English
+                    <hr>
+                    <a href="index.html" style="color: black;"; class="btn btn-info"><h6>Buy Link</h6></a>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+ 
+        
+        
+        
+        
+        
+        
+        
+        
+        <!-- MODALS -->
+         
+            <!-- PAGE FOOTER -->
+        
+        <footer class="page-footer ">
+            <div style="background-color:#212F3C  ;color: white; font-family: sans-serif;">
+                <div class="container">
+                <div class="row">
+                    <div class="col-md-2 mx-auto mb-1 mt-3">
+                    <a href="aboutus.html"><h5>About Us<i class="fas fa-info-circle ml-2"></i></h5></a>
+                    </div>
+                    <div class="col-md-2  mx-auto mb-1  mt-3">
+                    <a href="t&p.html"><h5>Terms & policy<i class="far fa-clipboard ml-2"></i></h5></a>
+                    </div>
+                    <div class="col-md-2  mx-auto mb-1  mt-3">
+                    <a href="faqs.html"><h5>FAQs<i class="fas fa-question-circle ml-2"></i></h5></a>
+                    </div>
+                    <div class="col-md-2  mx-auto mb-1  mt-3">
+                    <a href="#" data-toggle="modal" data-target="#conact"><h5>Contact Us<i class="fas fa-phone-square ml-2"></i></h5></a>
+                    
+                    </div>
+                </div>
+                </div>
+                <div class="footer-copyright text-center py-3 bg-dark">
+                    
+                    Copyright &copy; Bookify-The Exclusive book hub. All Rights Reserved  |  Contact Us: +91 7302176377
+                    
+                </div>
+            </div>
+        </footer>
+        <!-- FOOTER CONTACT US MODAL-->
+        <div class="modal" id="conact">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Contact</h3>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        
+                        <p><i class="fas fa-home mr-3"></i> Sector-15,Dams Streets,India(+91)</p>
+        
+                        <p><i class="fas fa-envelope mr-3"></i>boscodavid@gmail.com</p>
+        
+                        <p><i class="fas fa-phone mr-3"></i>+91 7302176377</p>
+        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>

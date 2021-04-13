@@ -1,0 +1,265 @@
+<html>
+    <head>
+        <title>bookify</title>
+         <link rel="icon" href="img/bookfavicon.jpg ">
+         <link href="aclonica" rel="stylesheet" type="text/css">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="othstyle.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    </head>
+    <body>
+       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/bookfavicon.jpg" alt="bookify" class="rounded-circle mr-1"  height="45" width="45">Bookify
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ">
+                <li class="nav-item active ">
+                    <a class="nav-link" href="bookify.html">
+                    <span class="fa fa-home mr-3"></span>
+                    
+                    <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#mysignupmodal">
+                        <i class="fa fa-user-plus"></i>
+                     Sign up
+                    </a>
+                </li>
+                <li class="nav-item active ">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#myloginmodal">
+                        <i class="fa fa-sign-in-alt"></i>
+                        Login
+                    </a>
+                </li>
+            </ul>
+        </div>
+        </nav>
+        <div class="container">
+<!-- SIGNUP Modal -->
+  <div class="modal" id="mysignupmodal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Register</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+        <div class="container">
+            <form method="post" action="signup.html">
+            <!--USERNAME-->
+            
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text fas fa-user"></span>
+                    </div>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter Username" required="true" pattern="^[a-zA-Z0-9]+([._]?[a-zA-Z0-9]+)*$">
+                </div>
+            
+           <!-- EMAIL -->
+           
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text fa fa-envelope"></span>
+                    </div>
+                    <input type="email" class="form-control" placeholder="Enter email" id="email" name="email" required="true"  >
+                </div>
+                <!-- MOBILE NO.-->
+            
+                <div for="contact" class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text fas fa-phone"></span>
+                    </div>
+                    <input type="tel" class="form-control"  placeholder="+91 "id="contact" name="contact" maxlength=10 size="10" required="true" >
+                </div>
+            <!--PASSWORD-->
+            
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text  fa fa-key"></span>
+                    </div>
+                    <input type="password" class="form-control"  placeholder="Enter password" id="password" name="password" pattern=".{6,}" required="true">
+                </div>
+            
+            
+            <button type="submit" class="btn btn-primary btn-block" name='submit'>Sign up</button>
+        </form>
+        </div>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+  </div>
+</div>
+  
+  
+ 
+        <div class="container">
+ 
+  
+  <!-- The Modal -->
+  <div class="modal" id="myloginmodal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Login</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div class="container">
+                <form action="/action_page.html">
+                    
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text fa fa-envelope"></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Enter email" id="email">
+                    </div>
+                    
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text  fa fa-key"></span>
+                        </div>
+                        <input type="text" class="form-control"  placeholder="Enter password" id="pwd">
+                     </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block">Log in</button>
+                </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+        </div>
+        
+        <div class="container tp text-justify">
+            <h1> <u>Terms & Policy </u> </h1>
+            <br>
+            <p>This document is an electronic record in terms of Information Technology Act, 2000 and rules there under as applicable and the amended provisions pertaining to electronic records in various statutes as amended by the Information Technology Act, 2000. This electronic record is generated by a computer system and does not require any physical or digital signatures.
+                This document is published in accordance with the provisions of Rule 3 (1) of the Information Technology (Intermediaries guidelines) Rules, 2011 that require publishing the rules and regulations, privacy policy and user agreement for access or usage of www.bookify.in.
+                These terms of use "Terms " apply to all users of <u>www.bookify.in.</u>
+                By using this Website you agree and acknowledge to be bound by these Terms.
+                References in these Terms to "we" or "us" or "website" or "company" are references to <u>www.bookify.in.</u> and  as a user such as visitor or customer or service provider of <u>www.bookify.in.</u>
+            </p>
+        
+            <h3><b>Purpose of the Website and list of services</b></h3>
+            <p>You also agree and acknowledge that Bookify website acts as a mere online platform for vendors and customers to connect with each other for various services listed in <b> Annexure-A.</b>
+                <br><b>User Agreement</b>
+                This User Agreement contains rules and regulations, policies and terms and conditions and agreement applicable to any person who may access or use www.bookify.in, including any sub domains, WebPages or extension of www.bookify.in Website and you hereby agree and acknowledge to be bound by the terms of this User Agreement.
+            </p>
+            <h3><b>Terms of Use</b></h3>
+            <p>Subscriber may only register with www.bookify.in if you have the necessary technical requirements at your disposal. Technical requirements are computer/smart phone and internet connection. 
+                The availability and the proper functioning of these technical requirements are the sole responsibility of the Subscriber.
+                You are responsible for paying all charges/ fees associated with the use of the Website and shall be liable to pay any and all applicable taxes, charges, cesses etc. which may be levied. 
+                In case of any non-payment, the Company reserves the right to issue a warning or temporarily/ indefinitely suspend or terminate your membership with the Website and disallow access to the Website.</p>
+            <h3><b>Availability of Website</b></h3>
+            <p>
+               Online service is not possible during maintenance periods. The subscriber may be informed about maintenance periods, if any.
+               The subscriber agrees and acknowledges that www.bookify.in shall not be held responsible for any problems that may arise during the course of the subscription due to the internet malfunction/connectivity issues and when the website is closed for maintenance / updating with prior notice.</p>
+            <h3><b>User Obligation</b></h3>
+            You agree and undertake not to host, display, upload, modify, publish, transmit, update or share any information or list any information or item that:
+            <ul>
+                <li>belongs to another person and to which You do not have any right to;</li>
+                <li>is grossly harmful, harassing, blasphemous, defamatory, obscene, pornographic, pedophilic, libelous, invasive of another's privacy, hateful, or racially, ethnically objectionable, disparaging, relating or encouraging money laundering or gambling, or otherwise unlawful in any manner whatever; or unlawfully threatening or unlawfully harassing harm minors in any way</li>
+                <li>deceives or misleads the addressee/ users about the origin of such messages or communicates any information which is grossly offensive or menacing in nature;</li>
+            </ul>
+        </div>
+       <!-- PAGE FOOTER -->
+        
+        <footer class="page-footer ">
+            <div style="background-color:#212F3C  ;color: white; font-family: sans-serif;">
+                <div class="container">
+                <div class="row">
+                    <div class="col-md-2 mx-auto mb-1 mt-3">
+                    <a href="aboutus.html"><h5>About Us<i class="fas fa-info-circle ml-2"></i></h5></a>
+                    </div>
+                    <div class="col-md-2  mx-auto mb-1  mt-3">
+                    <a href="t&p.html"><h5>Terms & policy<i class="far fa-clipboard ml-2"></i></h5></a>
+                    </div>
+                    <div class="col-md-2  mx-auto mb-1  mt-3">
+                    <a href="faqs.html"><h5>FAQs<i class="fas fa-question-circle ml-2"></i></h5></a>
+                    </div>
+                    <div class="col-md-2  mx-auto mb-1  mt-3">
+                    <a href="#" data-toggle="modal" data-target="#conact"><h5>Contact Us<i class="fas fa-phone-square ml-2"></i></h5></a>
+                    
+                    </div>
+                </div>
+                </div>
+                <div class="footer-copyright text-center py-3 bg-dark">
+                    
+                    Copyright &copy; Bookify-The Exclusive book hub. All Rights Reserved  |  Contact Us: +91 7302176377
+                    
+                </div>
+            </div>
+        </footer>
+        <!-- FOOTER CONTACT US MODAL-->
+        <div class="modal" id="conact">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Contact</h3>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        
+                        <p><i class="fas fa-home mr-3"></i> Sector-15,Dams Streets,India(+91)</p>
+        
+                        <p><i class="fas fa-envelope mr-3"></i>boscodavid@gmail.com</p>
+        
+                        <p><i class="fas fa-phone mr-3"></i>+91 7302176377</p>
+        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <!-- FOOTER CONTACT US MODAL-->
+        <div class="modal" id="contact">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Contact</h3>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        
+                        <p><i class="fas fa-home mr-3"></i> Sector-15,Dams Streets,India(+91)</p>
+        
+                        <p><i class="fas fa-envelope mr-3"></i>boscodavid@gmail.com</p>
+        
+                        <p><i class="fas fa-phone mr-3"></i>+91 7302176377</p>
+        
+                    </div>
+                    <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    
